@@ -9,7 +9,10 @@
   	<header class="main-header">
   		<a class="main-logo">Device</a>
   		<nav class="main-navigation">
-  			<!-- Форма поиска по сайту -->
+  			<form class="search" action="https://echo.htmlacademy.ru" method="post">
+  				<label class="visually-hiden" for="search">Поиск по сайту</label>
+  				<input type="search" id="search" name="search" placeholder="Поиск по сайту">
+  			</form>
   			<ul class="profile-navigation">
   				<li><a class="profile-navigation-item" href="#">Войти</a></li>
   			</ul>
@@ -36,7 +39,9 @@
   		</nav>
   	</header>
   	<main class="container">
+  		<h1 class="visually-hiden">Интернет-магазин "Девайс"</h1>
 	  	<section class="slider">
+	  		<h2 class="visually-hiden">Популярные товары</h2>
 	  		<ul class="slider-list">
 	  			<li class="slider-item">
 			  		<h3>Делай селфи,<br>
@@ -62,7 +67,7 @@
 			  		правильно!</h3>
 			  		<img class="slider-item-image" src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет">
 			  		<p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-			  		<a class="btn-details" href="#">Подробнее</a>
+			  		<a class="btn btn-details" href="#">Подробнее</a>
 			  		<table class="item-properties">
 			  			<tr>
 			  				<td>48 часов</td>
@@ -74,7 +79,7 @@
 			  		<h3>Порхает как бабочка, жалит как пчела!</h3>
 			  		<img class="slider-item-image" src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
 			  		<p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-			  		<a class="btn-details" href="#">Подробнее</a>
+			  		<a class="btn btn-details" href="#">Подробнее</a>
 			  		<table class="item-properties">
 			  			<tr>
 			  				<td>800 м</td>
@@ -87,6 +92,7 @@
 	  		</ul>
 	  	</section>
 	  	<section class="catalog-navigation">
+	  		<h2 class="visually-hiden">Каталог товаров</h2>
 	  		<ul class="catalog-navigation-list">
 	  			<li class="catalog-navigation-item">
 	  				<a href="#"><img class="catalog-navigation-image" src="img/virtual-icon.svg" width="97" height="55" alt="Виртуальная реальность"></a>
@@ -107,10 +113,11 @@
 	  		</ul>
 	  	</section>
 	  	<section class="services">
+	  		<h2 class="visually-hiden">Сервисы</h2>
 	  		<ul class="services-list">
-		  		<li class="services-list-item">Доставка</li>
-		  		<li class="services-list-item">Гарантия</li>
-		  		<li class="services-list-item">Кредит</li>
+		  		<li class="services-list-item"><button class="btn btn-delivery" type="button">Доставка</button></li>
+		  		<li class="services-list-item"><button class="btn btn-waranty" type="button">Гарантия</button></li>
+		  		<li class="services-list-item"><button class="btn btn-credit" type="button">Кредит</button></li>
 	  		</ul>
 	  		<ul class="services-description-list">
 	  			<li class="services-description-item">
@@ -129,6 +136,7 @@
 		  	</ul>
 	  	</section>
 	  	<section class="brands">
+	  		<h2 class="visually-hiden">Бренды</h2>
 	  		<ul class="brands-list">
 	  			<li class="brands-item">
 			  		<a href="#"><img class="brands-item-image" src="img/brand-1-mono.png" width="260" height="100" alt="Dji"></a>
@@ -159,7 +167,7 @@
 		  	<section class="contacts">
 		  		<h2>Контакты</h2>
 		  		<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-		  		<a class="map" href="#"><img src="img/map.jpg" width="560" height="222" alt="Карта"></a>
+		  		<a class="map" href="#"><img src="img/map.jpg" width="560" height="222" alt="г. Москва, ул. Строителей, 15"></a>
 		  		<a class="btn btn-contacts" href="#">Напишите нам</a>
 		  	</section>
 		  </div>
@@ -190,15 +198,32 @@
 		  			<li><a class="social-btn" href="#">Instagram</a></li>
 		  			<li><a class="social-btn" href="#">Twitter</a></li>
 		  		</ul>
-		  		<a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss"></a>
+		  		<a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
 	  		</div>
 	  	</footer>
 	  	<section class=" modal modal-write-us">
-	  		<span class="modal-close">x</span>
-	  		<!-- Здесь будет форма -->
+	  		<h2 class="visually-hiden">Напишите нам</h2>
+	  		<button class="modal-close" type="button">Закрыть</button>
+	  		<form class="write-us" action="https://echo.htmlacademy.ru" method="post">
+	  			<p>
+		  			<label for="name">Ваше имя:</label>
+		  			<input type="text" id="name" placeholder="Имя Фамилия">
+	  			</p>
+	  			<p>
+	  				<label for="email">Ваш e-mail:</label>
+	  				<input type="email" id="email" placeholder="email@example.com">
+	  			</p>
+	  			<p>
+	  				<label for="text">Текст письма:</label>
+	  				<textarea id="text">В свободной форме</textarea>
+	  			</p>
+	  			<button class="btn btn-write-us" type="submit">Отправить</button>
+	  		</form>
 	  	</section>
 	  	<section class="modal modal-map">
-	  		<span class="modal-close">x</span>
+	  		<h2 class="visually-hiden">Как добраться</h2>
+	  		<button class="modal-close" type="button">Закрыть</button>
+	  		<img src="img/map-big.jpg" width="960" height="559" alt="г. Москва, ул. Строителей, 15">
 	  	</section>
   </body>
 </html>
