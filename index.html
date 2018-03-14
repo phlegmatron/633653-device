@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -10,7 +11,7 @@
   		<a class="main-logo">Device</a>
   		<nav class="main-navigation">
   			<form class="search" action="https://echo.htmlacademy.ru" method="post">
-  				<label class="visually-hiden" for="search">Поиск по сайту</label>
+  				<label class="visually-hidden" for="search">Поиск по сайту</label>
   				<input type="search" id="search" name="search" placeholder="Поиск по сайту">
   			</form>
   			<ul class="profile-navigation">
@@ -39,10 +40,10 @@
   		</nav>
   	</header>
   	<main class="container">
-  		<h1 class="visually-hiden">Интернет-магазин "Девайс"</h1>
+  		<h1 class="visually-hidden">Интернет-магазин "Девайс"</h1>
 	  	<section class="slider">
-	  		<h2 class="visually-hiden">Популярные товары</h2>
-	  		<ul class="slider-list">
+	  		<h2 class="visually-hidden">Популярные товары</h2>
+	  		<ol class="slider-list">
 	  			<li class="slider-item">
 			  		<h3>Делай селфи,<br>
 			  		как Бен Стиллер!</h3>
@@ -71,6 +72,8 @@
 			  		<table class="item-properties">
 			  			<tr>
 			  				<td>48 часов</td>
+			  			</tr>
+			  			<tr>
 			  				<td>Без подзарядки</td>
 			  			</tr>
 			  		</table>
@@ -84,38 +87,40 @@
 			  			<tr>
 			  				<td>800 м</td>
 			  				<td>50 м</td>
+			  			</tr>
+			  			<tr>
 			  				<td>Дальность полета</td>
 			  				<td>Радиус поражения</td>
 			  			</tr>
 			  		</table>
 		  		</li>
-	  		</ul>
+	  		</ol>
 	  	</section>
 	  	<section class="catalog-navigation">
-	  		<h2 class="visually-hiden">Каталог товаров</h2>
+	  		<h2 class="visually-hidden">Каталог товаров</h2>
 	  		<ul class="catalog-navigation-list">
 	  			<li class="catalog-navigation-item">
-	  				<a href="#"><img class="catalog-navigation-image" src="img/virtual-icon.svg" width="97" height="55" alt="Виртуальная реальность"></a>
+	  				<a href="#"><img class="catalog-navigation-image" src="img/virtual-icon.svg" width="97" height="55" alt="Виртуальная реальность">Виртуальная реальность</a>
 	  			</li>
 	  			<li class="catalog-navigation-item">
-	  				<a href="catalog-item.html"><img class="catalog-navigation-image" src="img/monopod-icon.svg" width="86" height="117" alt="Моноподы для селфи"></a>
+	  				<a href="catalog-item.html"><img class="catalog-navigation-image" src="img/monopod-icon.svg" width="86" height="117" alt="Моноподы для селфи">Моноподы для селфи</a>
 	  			</li>
 	  			<li class="catalog-navigation-item">
-	  				<a href="#"><img class="catalog-navigation-image" src="img/camera-icon.svg" width="71" height="87" alt="Экшн-камеры"></a></li>
-	  			<li class="catalog-navigation-item"><a href="#"><img class="catalog-navigation-image" src="img/fitness-icon.svg" width="107" height="65" alt="Фитнес-браслеты"></a>
+	  				<a href="#"><img class="catalog-navigation-image" src="img/camera-icon.svg" width="71" height="87" alt="Экшн-камеры">Экшн-камеры</a></li>
+	  			<li class="catalog-navigation-item"><a href="#"><img class="catalog-navigation-image" src="img/fitness-icon.svg" width="107" height="65" alt="Фитнес-браслеты">Фитнес-браслеты</a>
 	  			</li>
 	  			<li class="catalog-navigation-item">
-	  				<a href="#"><img class="catalog-navigation-image" src="img/watch-icon.svg" width="56" height="98" alt="Умные часы"></a>
+	  				<a href="#"><img class="catalog-navigation-image" src="img/watch-icon.svg" width="56" height="98" alt="Умные часы">Умные часы</a>
 	  			</li>
 	  			<li class="catalog-navigation-item">
-	  				<a href="#"><img class="catalog-navigation-image" src="img/quad-icon.svg" width="132" height="69" alt="Квадрокоптеры"></a>
+	  				<a href="#"><img class="catalog-navigation-image" src="img/quad-icon.svg" width="132" height="69" alt="Квадрокоптеры">Квадрокоптеры</a>
 	  			</li>
 	  		</ul>
 	  	</section>
 	  	<section class="services">
-	  		<h2 class="visually-hiden">Сервисы</h2>
+	  		<h2 class="visually-hidden">Сервисы</h2>
 	  		<ul class="services-list">
-		  		<li class="services-list-item"><button class="btn btn-delivery" type="button">Доставка</button></li>
+		  		<li class="services-list-item"><button class="btn btn-delivery current" type="button">Доставка</button></li>
 		  		<li class="services-list-item"><button class="btn btn-waranty" type="button">Гарантия</button></li>
 		  		<li class="services-list-item"><button class="btn btn-credit" type="button">Кредит</button></li>
 	  		</ul>
@@ -136,7 +141,7 @@
 		  	</ul>
 	  	</section>
 	  	<section class="brands">
-	  		<h2 class="visually-hiden">Бренды</h2>
+	  		<h2 class="visually-hidden">Бренды</h2>
 	  		<ul class="brands-list">
 	  			<li class="brands-item">
 			  		<a href="#"><img class="brands-item-image" src="img/brand-1-mono.png" width="260" height="100" alt="Dji"></a>
@@ -202,7 +207,7 @@
 	  		</div>
 	  	</footer>
 	  	<section class=" modal modal-write-us">
-	  		<h2 class="visually-hiden">Напишите нам</h2>
+	  		<h2 class="visually-hidden">Напишите нам</h2>
 	  		<button class="modal-close" type="button">Закрыть</button>
 	  		<form class="write-us" action="https://echo.htmlacademy.ru" method="post">
 	  			<p>
@@ -221,7 +226,7 @@
 	  		</form>
 	  	</section>
 	  	<section class="modal modal-map">
-	  		<h2 class="visually-hiden">Как добраться</h2>
+	  		<h2 class="visually-hidden">Как добраться</h2>
 	  		<button class="modal-close" type="button">Закрыть</button>
 	  		<img src="img/map-big.jpg" width="960" height="559" alt="г. Москва, ул. Строителей, 15">
 	  	</section>

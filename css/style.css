@@ -1,0 +1,192 @@
+@font-face {
+	font-family: "Gilroy";
+	src:
+		local:("Gilroy ExtraBold"),
+		url(fonts/gilroyextrabold.woff2) format("woff2");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src:
+		local:("Gilroy Light"),
+		url(fonts/gilroylight.woff2) format("woff2");
+	font-weight: lighter;
+}
+
+@font-face {
+	font-family: "Open Sans";
+	src:
+		local:("Open Sans"),
+		url(fonts/opensans.woff2) format("woff2");
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Open Sans";
+	src:
+		local:("Open Sans Light");
+		url(fonts/opensans.woff2) format("woff2");
+	font-weight: lighter;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 15px;
+	line-height: 30px;
+	color: #000000;
+	font-weight: lighter;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+.btn {
+	font-family: Gilroy, Arial, sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.visually-hidden {
+	position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.main-header {
+	background-color: #f7e296;
+}
+
+.main-logo {
+	font-family: Gilroy, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 48px;
+	line-height: 48px;
+	text-transform: uppercase;
+}
+
+.main-navigation .search {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.profile-navigation,
+.user-navigation {
+	list-style: none;
+}
+
+.site-navigation {
+	list-style: none;
+}
+
+.site-navigation > li > a {
+	font-family: Gilroy, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 24px;
+	text-transform: uppercase;
+	list-style: none;
+}
+
+.slider-list {
+	list-style: none;
+}
+
+.slider-item h3 {
+	font-family: Gilroy, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 47px;
+	line-height: 56px;
+	text-transform: none;
+}
+
+.item-properties tr:first-child {
+	font-family: Gilroy, Arial, sans-serif;
+	font-size: 36px;
+	line-height: 48px;
+}
+
+.catalog-navigation-list {
+	font-family: Gilroy, Arial, sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: bold;
+	list-style: none;
+}
+
+.services {
+	background-color: #e5e5e5;
+}
+
+.services-list {
+	list-style: none;
+}
+
+.services-list .current {
+	color: #f7e184;
+}
+
+.services-description-list {
+	list-style: none;
+}
+
+.services-description-list h3,
+.info-container h2 {
+	font-family: Gilroy, Arial, sans-serif;
+	font-size: 47px;
+	line-height: 48px;
+	font-weight: bold;
+}
+
+.brands-list {
+	list-style: none;
+}
+
+.delivery-list {
+	font-family: Gilroy, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 40px;
+	font-weight: bold;
+	list-style: none;
+}
+
+.main-footer {
+	background-color: #464646;
+}
+
+.main-footer a {
+	color: #ffffff;
+}
+
+.footer-logo {
+	font-family: Gilroy, Arial, sans-serif;
+	font-size: 48px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #ffc600;
+}
+
+.footer-profile-navigation,
+.footer-user-navigation {
+	list-style: none;
+}
+
+.footer-navigation {
+	font-family: Gilroy, Arial, sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: bold;
+	list-style: none;
+}
+
+.social-list {
+	list-style: none;
+}
