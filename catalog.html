@@ -8,11 +8,12 @@
 	</head>
 	<body>
 		<header class="main-header">
-  		<a class="main-logo" href="index.html">Device</a>
+  		<a class="main-logo inner" href="index.html">Device</a>
   		<nav class="main-navigation">
   			<form class="search">
   				<label class="visually-hidden" for="search">Поиск</label>
   				<input type="search" id="search" name="search" placeholder="Поиск по сайту">
+  				<button class="search-button" type="submit">Найти</button>
   			</form>
   			<ul class="profile-navigation">
   				<li><a class="profile-navigation-item" href="#">Валентин Петухов</a></li>
@@ -46,19 +47,19 @@
 	  		<ul class="breadcrumbs">
 	  			<li><a href="index.html">Главная</a></li>
 	  			<li><a href="#">Каталог товаров</a></li>
-	  			<li class="breadcrumbs-current">Моноподы для селфи</li>
+	  			<li><a class="breadcrumbs-current">Моноподы для селфи</a></li>
 	  		</ul>
 	  	</section>
 	  	<section class="filter">
-	  		<h2 class="visually-hidden">Фильтр</h2>
+	  		<h2>Фильтр:</h2>
 	  		<form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
-	  			<p>
-	  				<label for="price-range">Стоимость</label>
+	  			<p class="filter-container">
+	  				<label class="price-range" for="price-range">Стоимость</label>
 	  				от 0
 	  				<input type="range" id="price-range">
 	  				до 5000
 	  			</p>
-	  			<fieldset>
+	  			<fieldset class="filter-container">
 	  				<legend>Цвет</legend>
 	  				<ul>
 	  					<li>
@@ -83,7 +84,7 @@
 	  					</li>
 	  				</ul>
 	  			</fieldset>
-	  			<fieldset>
+	  			<fieldset class="filter-container">
 	  				<legend>Bluetooth</legend>
 	  				<label>
 		  				<input type="radio" name="bluetooth" value="true" checked>
@@ -94,30 +95,33 @@
 	  					Нет
 	  				</label>
 	  			</fieldset>
-	  			<button class="btn btn-filter" type="submit">Отправить</button>
+	  			<button class="btn btn-filter" type="submit">Показать</button>
 	  		</form>
 	  	</section>
 	  	<section class="catalog">
-	  		<h2>Сортировка:</h2>
-	  		<ul class="sort-menu">
-	  			<li><a href="#">По цене</a></li>
-	  			<li><a href="#">По типу</a></li>
-	  			<li><a href="#">По популярности</a></li>
-	  		</ul>
-	  		<ul class="sort-btn-list">
-	  			<li><a class="sort-btn" href="#">По возрастанию</a></li>
-	  			<li><a class="sort-btn" href="#">По убыванию</a></li>
-	  		</ul>
+	  		<div class="sort-container">
+		  		<h2>Сортировка:</h2>
+		  		<ul class="sort-menu">
+		  			<li><a class="current">По цене</a></li>
+		  			<li><a href="#">По типу</a></li>
+		  			<li><a href="#">По популярности</a></li>
+		  		</ul>
+		  		<ul class="sort-btn-list">
+		  			<li><a class="sort-btn" href="#">По возрастанию</a></li>
+		  			<li><a class="sort-btn" href="#">По убыванию</a></li>
+		  		</ul>
+	  		</div>
 	  		<ul class="catalog-list">
 	  			<li class="catalog-item">
 	  				<h2><a href="#">Любительская селфи-палка</a></h2>
 	  				<img src="img/catalog-item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
 	  				<p>500 руб.</p>
 	  				<span class="btn btn-cart">В корзину</span>
-	  				<span class="add-compare">Добавить к сравнению</span>
+	  				<button class="add-compare" type="button">Добавить к сравнению</button>
 	  			</li>
 	  			<li class="catalog-item">
 	  				<h2><a href="#">Профессиональная селфи-палка</a></h2>
+	  				<div class="catalog-image-container">
 	  				<img src="img/catalog-item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
 	  				<p>1 500 руб.</p>
 	  				<button class="btn btn-cart" type="button">В корзину</button>
@@ -140,8 +144,8 @@
 	  			</li>
 	  		</ul>
 	  		<ul class="pagination-list">
-	  			<li class="pagination-item">Назад</li>
-	  			<li class="pagination-item current"><a>1</a></li>
+	  			<li class="pagination-item disabled"><a>Назад</a></li>
+	  			<li class="pagination-item"><a class="current">1</a></li>
 	  			<li class="pagination-item"><a href="#">2</a></li>
 	  			<li class="pagination-item"><a href="#">3</a></li>
 	  			<li class="pagination-item"><a href="#">Вперед</a></li>
@@ -150,7 +154,7 @@
   	</main>
   	<footer class="main-footer">
   		<div class="footer-container">
-	  		<a class="footer-logo" href="index.html">Device</a>
+	  		<a class="footer-logo inner" href="index.html">Device</a>
   			<ul class="footer-profile-navigation">
   				<li><a class="profile-link" href="#">Валентин Петухов</a></li>
   				<li><a class="logout-link faint" href="#">Выйти</a></li>
@@ -175,7 +179,7 @@
 	  			<li><a class="social-btn" href="#">Instagram</a></li>
 	  			<li><a class="social-btn" href="#">Twitter</a></li>
 	  		</ul>
-	  		<a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss"></a>
+	  		<a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
 	  	</div>
   	</footer>
 	</body>
