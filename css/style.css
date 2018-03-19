@@ -31,7 +31,8 @@
 }
 
 body {
-	padding: 0;
+	min-width: 1200px;
+	padding: 0 20px;
 	margin: 0;
 
 	font-family: "Open Sans", Arial, sans-serif;
@@ -71,10 +72,18 @@ a {
 }
 
 .main-header {
+	position: relative;
+	width: 1160px;
+	padding: 50px 60px;
+	margin: 0 auto;
+	margin-top: 40px;
 	background-color: #f7e296;
 }
 
 .main-logo {
+	position: absolute;
+	top: -22px;
+	left: 60px;
 	font-family: Gilroy, Arial, sans-serif;
 	font-weight: bold;
 	font-size: 48px;
@@ -90,25 +99,44 @@ a {
 	color: rgba(0, 0, 0, 0.3);
 }
 
+.main-navigation {
+	display: flex;
+	flex-direction: column;
+}
+
+.main-navigation-wrapper {
+	margin-bottom: 50px;
+
+	display: flex;
+}
+
+.search {
+	width: 400px;
+	margin-left: 40px;
+}
+
 .search input[type="search"] {
+	width: 315px;
+
 	border: none;
 	background-color: #f7e296; 
 }
 
-.search-button {
+.btn-search {
 	font-size: 15px;
 	line-height: 30px;
+	display: none;
 
 	background: none;
 	border: solid 2px #000000;
 }
 
-.search-button:hover {
+.btn-search:hover {
 	color: #ffffff;
 	background-color: #000000;
 }
 
-.search-button:active {
+.btn-search:active {
 	color: rgba(255, 255, 255, 0.3);
 	background-color: #000000;
 }
@@ -130,8 +158,27 @@ a {
 	border-bottom: solid 2px #000000;
 }
 
+.profile-navigation {
+	width: 260px;
+	padding: 0;
+	margin: 0;
+	margin-left: 125px;
+}
+
 .profile-navigation .faint {
 	color: rgba(0, 0, 0, 0.3);
+}
+
+.user-navigation {
+	display: flex;
+	width: 200px;
+	padding: 0;
+	margin: 0;
+	margin-left: auto;
+}
+
+.user-navigation li:last-child {
+	margin-left: auto
 }
 
 .profile-navigation,
@@ -150,7 +197,23 @@ a {
 }
 
 .site-navigation {
+	margin: 0px;
+	padding: 0px;
+
+	display: flex;
 	list-style: none;
+}
+
+.site-navigation li:nth-child(2) {
+	margin-left: 320px;
+}
+
+.site-navigation li:nth-child(3) {
+	margin-left: 40px;
+}
+
+.site-navigation li:last-child {
+	margin-left: auto;
 }
 
 .site-navigation a:hover {
@@ -171,10 +234,18 @@ a {
 }
 
 .header-catalog-list {
+	display: none;
 	list-style: none;
 }
 
+.container {
+	width: 1160px;
+	margin: 0 auto;
+}
+
 .slider-list {
+	display: flex;
+	flex-direction: column;
 	list-style: none;
 }
 
