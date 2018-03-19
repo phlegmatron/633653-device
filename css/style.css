@@ -1,38 +1,39 @@
 @font-face {
 	font-family: "Gilroy";
 	src:
-		local:("Gilroy ExtraBold"),
-		url(fonts/gilroyextrabold.woff2) format("woff2");
+		local("Gilroy ExtraBold"),
+		url("../fonts/gilroyextrabold.woff2") format("woff2");
 	font-weight: bold;
 }
 
 @font-face {
 	font-family: "Gilroy";
 	src:
-		local:("Gilroy Light"),
-		url(fonts/gilroylight.woff2) format("woff2");
+		local("Gilroy Light"),
+		url("../fonts/gilroylight.woff2") format("woff2");
 	font-weight: lighter;
 }
 
 @font-face {
 	font-family: "Open Sans";
 	src:
-		local:("Open Sans"),
-		url(fonts/opensans.woff2) format("woff2");
+		local("Open Sans"),
+		url("../fonts/opensans.woff2") format("woff2");
 	font-weight: normal;
 }
 
 @font-face {
 	font-family: "Open Sans";
 	src:
-		local:("Open Sans Light");
-		url(fonts/opensans.woff2) format("woff2");
+		local("Open Sans Light"),
+		url("../fonts/opensans.woff2") format("woff2");
 	font-weight: lighter;
 }
 
 body {
 	min-width: 1200px;
-	padding: 0 20px;
+	padding: 0;
+	padding-top: 40px;
 	margin: 0;
 
 	font-family: "Open Sans", Arial, sans-serif;
@@ -74,9 +75,8 @@ a {
 .main-header {
 	position: relative;
 	width: 1160px;
-	padding: 50px 60px;
+	padding: 50px 0px;
 	margin: 0 auto;
-	margin-top: 40px;
 	background-color: #f7e296;
 }
 
@@ -102,10 +102,12 @@ a {
 .main-navigation {
 	display: flex;
 	flex-direction: column;
+	width: 1040px;
+	margin: 0 auto;
 }
 
 .main-navigation-wrapper {
-	margin-bottom: 50px;
+	margin-bottom: 45px;
 
 	display: flex;
 }
@@ -238,23 +240,54 @@ a {
 	list-style: none;
 }
 
-.container {
+.slider {
 	width: 1160px;
 	margin: 0 auto;
+	margin-bottom: 105px;
 }
 
 .slider-list {
-	display: flex;
-	flex-direction: column;
-	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
-.slider-item h3 {
+.slider-item {
+	display: flex;
+}
+
+.slider-image-wrapper {
+	min-width: 526px;
+}
+
+.slider-description-wrapper {
+	margin-left: 40px;
+}
+
+.slider-description-wrapper h3 {
+	margin: 0;
+	margin-bottom: 30px;
+
 	font-family: Gilroy, Arial, sans-serif;
 	font-weight: bold;
 	font-size: 47px;
 	line-height: 56px;
 	text-transform: none;
+}
+
+.slider-description-wrapper p {
+	margin-bottom: 60px;
+}
+
+.item-properties {
+	margin-top: 70px;
+}
+
+.item-properties td {
+	padding-left: 80px;
+}
+
+.item-properties td:first-child {
+	padding: 0;
 }
 
 .btn-details:hover {
@@ -272,7 +305,16 @@ a {
 	line-height: 48px;
 }
 
+.catalog-navigation {
+	width: 1160px;
+	margin: 0 auto;
+}
+
 .catalog-navigation-list {
+	display: flex;
+	padding: 0;
+	margin: 0;
+
 	font-family: Gilroy, Arial, sans-serif;
 	font-size: 18px;
 	line-height: 24px;
@@ -281,7 +323,26 @@ a {
 }
 
 .catalog-navigation-container {
+	width: 160px;
+	height: 160px;
+	margin-bottom: 40px;
+
+	text-align: center;
+
 	background-color: #f7e296;
+}
+
+.catalog-navigation-item {
+	margin-left: 40px;
+	margin-bottom: 165px;
+}
+
+.catalog-navigation-item:first-child {
+	margin: 0;
+}
+
+.catalog-navigation-container img {
+	vertical-align: middle;
 }
 
 .catalog-navigation-item a:hover .catalog-navigation-container  {
