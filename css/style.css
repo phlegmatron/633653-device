@@ -247,7 +247,11 @@ a {
 }
 
 .slider-list {
+	width: 1040px;
+
 	padding: 0;
+	padding-left: 30px;
+	padding-right: 60px;
 	margin: 0;
 }
 
@@ -257,6 +261,7 @@ a {
 
 .slider-image-wrapper {
 	min-width: 526px;
+	text-align: center;
 }
 
 .slider-description-wrapper {
