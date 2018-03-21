@@ -608,7 +608,7 @@ a.footer-logo {
 	display: flex;
 	padding: 0;
 	margin: 0;
-	margin-left: auto;
+	margin-left: 500px;
 
 	list-style: none;
 }
@@ -621,6 +621,8 @@ a.footer-logo {
 	width: 760px;
 	padding: 100px;
 	margin: 0 auto;
+
+	box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
 }
 
 .write-us {
