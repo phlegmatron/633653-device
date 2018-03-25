@@ -2,9 +2,9 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+	    <title>HTML Academy: Девайс</title>
+	    <link rel="stylesheet" href="css/normalize.css">
+	    <link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
 		<div class="container">
@@ -123,12 +123,11 @@
 		  				<h2><a href="#">Любительская селфи-палка</a></h2>
 		  				<img src="img/catalog-item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
 		  				<p>500 руб.</p>
-		  				<span class="btn btn-cart">В корзину</span>
+		  				<button class="btn btn-cart" type="button">В корзину</button>
 		  				<button class="add-compare" type="button">Добавить к сравнению</button>
 		  			</li>
 		  			<li class="catalog-item">
 		  				<h2><a href="#">Профессиональная селфи-палка</a></h2>
-		  				<div class="catalog-image-container">
 		  				<img src="img/catalog-item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
 		  				<p>1 500 руб.</p>
 		  				<button class="btn btn-cart" type="button">В корзину</button>
@@ -150,13 +149,15 @@
 		  				<span class="new">New</span>
 		  			</li>
 		  		</ul>
-		  		<ul class="pagination-list">
-		  			<li class="pagination-item disabled"><a>Назад</a></li>
-		  			<li class="pagination-item"><a class="current">1</a></li>
-		  			<li class="pagination-item"><a href="#">2</a></li>
-		  			<li class="pagination-item"><a href="#">3</a></li>
-		  			<li class="pagination-item"><a href="#">Вперед</a></li>
-		  		</ul>
+		  		<div class="pagination">
+		  			<a>Назад</a>
+			  		<ul class="pagination-list">
+			  			<li class="pagination-item"><a class="current">1</a></li>
+			  			<li class="pagination-item"><a href="#">2</a></li>
+			  			<li class="pagination-item"><a href="#">3</a></li>
+			  		</ul>
+			  		<a href="#">Вперед</a>
+		  		</div>
 		  	</section>
 	  	</div>
   	</main>

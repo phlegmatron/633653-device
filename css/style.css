@@ -759,10 +759,16 @@ a.footer-logo {
 
 .inner-container {
 	display: flex;
+	width: 1160px;
+	margin: 0 auto;
 }
 
 .filter {
-	background-color: #efefef;
+	position: relative;
+
+	padding-left: 60px;
+	padding-right: 65px;
+	min-width: 200px;
 }
 
 .filter-form p {
@@ -780,15 +786,13 @@ a.footer-logo {
 }
 
 .filter h2 {
-	padding: 0;
+	padding: 23px 0;
 	margin: 0;
 
 	font-size: 16px;
 	line-height: 24px;
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
-
-	background-color: #dcdcdc;
 }
 
 .filter-form .price-range,
@@ -822,22 +826,44 @@ a.footer-logo {
 	background-color: #f0c52e;
 }
 
+.filter-form::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+
+	width: 100vw;
+	height: 100%;
+
+	background: linear-gradient(to bottom, #dcdcdc 70px, #efefef 70px);
+}
+
 .catalog {
 	display: flex;
-	flex-grow: 1;
 	flex-direction: column;
 }
 
 .sort-container {
-	display: flex;
+	position: relative;
 
-	background-color: #ebebeb;
+	display: flex;
+	align-items: center;
+	padding: 20px 0;
+	padding-left: 75px;
 }
 
 .sort-container ul {
 	display: flex;
 	padding: 0;
 	margin: 0;
+}
+
+.sort-container .sort-menu {
+	justify-content: space-between;
+	min-width: 300px;
+	margin: 0;
+	margin-left: 40px;
 }
 
 .sort-container > h2 {
@@ -875,26 +901,74 @@ a.footer-logo {
 	color: #000000;
 }
 
+.sort-container::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+
+	width: 100vw;
+	height: 100%;
+
+	background-color: #ebebeb;
+}
+
 .catalog-list {
 	display: flex;
+	justify-content: space-between;
 	flex-wrap: wrap;
 	width: 760px;
-	padding: 0;
+	padding-top: 70px;
+	padding-left: 70px;
 	margin: 0;
 	
 
 	list-style: none;
 }
 
+.catalog-item {
+	position: relative;
+
+	display: flex;
+	flex-wrap: wrap;
+	width: 360px;
+	margin-bottom: 50px;
+}
+
 .catalog-item h2 {
+	width: 260px;
+	margin: 0;
+
 	font-family: Gilroy, Arial, sans-serif;
 	font-size: 18px;
 	line-height: 24px;
 	font-weight: bold;
 }
 
+.catalog-item img {
+	order: -1;
+	margin-bottom: 30px;
+}
+
 .catalog-item p {
+	margin: 0;
+	margin-left: auto;
+
 	font-size: 16px;
+}
+
+.catalog-item:hover::after {
+	content: "";
+
+	position: absolute;
+
+	width: 360px;
+	height: 380px;
+	top: 0;
+	left: 0;
+
+	background-color: rgba(238, 238, 238, 0.7);
 }
 
 .add-compare {
@@ -932,50 +1006,58 @@ a.footer-logo {
 	letter-spacing: 0.05em;
 }
 
-.pagination-list {
-	list-style: none;
+.pagination {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 70px;
+
 	background-color: #ebebeb;
 }
 
-.pagination-item a {
+.pagination a {
 	font-family: Gilroy, Arial, sans-serif;
 	font-weight: bold;
 	font-size: 16px;
 	line-height: 24px;
 	letter-spacing: 0.2em;
-	color: rgba(0, 0, 0, 0.2);
+	text-transform: uppercase;
 }
 
-.pagination-item:first-child a,
-.pagination-item .current,
-.pagination-item:last-child a {
+.pagination > a {
+	display: block;
+	padding: 25px 30px;
+}
+
+.pagination-list {
+	display: flex;
+	justify-content: space-between;
+	min-width: 90px;
+	padding: 0;
+	margin: 0;
+
+	list-style: none;
+}
+
+.pagination-list a[href] {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination-list a[href]:hover,
+.pagination-list a[href]:focus {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.pagination-list a[href]:active {
 	color: #000000;
 }
 
-.pagination-item:first-child:hover:not(.disabled) {
+.pagination > a[href]:hover,
+.pagination > a[href]:focus {
 	background-color: #d9d9d9;
 }
 
-.pagination-item:first-child:active:not(.disabled) a {
-	color: rgba(0, 0, 0, 0.3);
-}
-
-.pagination-item:last-child:hover:not(.disabled) {
+.pagination > a[href]:active {
 	background-color: #d9d9d9;
-}
-
-.pagination-item:last-child:active:not(.disabled) a {
 	color: rgba(0, 0, 0, 0.3);
-}
-
-.pagination-item:nth-child(2) a:hover:not(.current),
-.pagination-item:nth-child(3) a:hover:not(.current),
-.pagination-item:nth-child(4) a:hover:not(.current) {
-	color: rgba(0, 0, 0, 0.6);
-}
-
-.pagination-item:nth-child(2) a:active:not(.current),
-.pagination-item:nth-child(3) a:active:not(.current),
-.pagination-item:nth-child(4) a:active:not(.current) {
-	color: rgba(0, 0, 0, 0.6);
 }
