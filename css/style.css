@@ -514,7 +514,7 @@ a {
 }
 
 .btn-details:hover::before {
-	transform: scaleY(3)
+	transform: scaleY(5);
 }
 
 .btn-details:active {
@@ -525,10 +525,11 @@ a {
 .btn-slide {
 	position: absolute;
 	bottom: 158px;
-	right: 150px;
+	right: 151px;
 
+	padding: 0;
 	width: 12px;
-	height: 13px;
+	height: 12px;
 
 	cursor: pointer;
 	background: none;
@@ -537,7 +538,7 @@ a {
 }
 
 .btn-slide:nth-of-type(2) {
-	right: 117px;
+	right: 118px;
 }
 
 .btn-slide:nth-of-type(3) {
@@ -545,7 +546,7 @@ a {
 }
 
 .btn-slide.active {
-	background: radial-gradient(circle, #ffffff 2px, #000000 2px, #000000 3px, #ffffff 3px);
+	background: radial-gradient(circle, #ffffff 1px, #000000 1px, #000000 2px, #ffffff 2px);
 }
 
 .item-properties tr:first-child {
@@ -604,7 +605,7 @@ a {
 
 .services {
 	position: relative;
-	z-index: -2;
+	z-index: 0;
 
 	min-height: 308px;
 	margin-bottom: 95px;
@@ -648,7 +649,7 @@ a {
 .btn-services {
 	position: relative;
 
-	width: 160px;
+	min-width: 160px;
 }
 
 .btn-services::before {
@@ -683,11 +684,28 @@ a {
 	height: 40px;
 
 	background-color: #000000;
+}
 
+.btn-services:active {
+	color: #f7e184;
+}
+
+.btn-services:active::after {
+	content: "";
+
+	position: absolute;
+	top: -7px;
+	left: 0;
+	z-index: -1;
+
+	width: 278px;
+	height: 40px;
+
+	background-color: #000000;
 }
 
 .btn-services:hover::before {
-	transform: scaleY(3)
+	transform: scaleY(5);
 }
 
 .services-description-list {
@@ -725,11 +743,6 @@ a {
 
 .services-description-item p {
 	width: 430px;
-}
-
-.services-list-item .btn:active {
-	color: #f7e184;
-	background-color: #000000;
 }
 
 .services-description-item:first-child::after {
@@ -789,32 +802,74 @@ a {
 	list-style: none;
 }
 
+.brands-item img {
+	opacity: 0;
+}
+
+.brands-item:first-child {
+	background-image: url(../img/brand-1-mono.jpg);
+}
+
+.brands-item:nth-child(2) {
+	background-image: url(../img/brand-2-mono.jpg);
+}
+
+.brands-item:nth-child(3) {
+	background-image: url(../img/brand-3-mono.jpg);
+}
+
+.brands-item:last-child {
+	background-image: url(../img/brand-4-mono.jpg);
+}
+
+.brands-item img:hover {
+	opacity: 1;
+}
+
 .info-container {
 	display: flex;
 	justify-content: space-between;
 	width: 1160px;
 	margin: 0 auto;
+	margin-bottom: 90px;
 }
 
 .about-us {
-	width: 495px;
+	position: relative;
+
+	width: 485px;
+}
+
+.about-us::before {
+	content: "";
+
+	position: absolute;
+	top: -50px;
+	left: 0;
+
+	width: 80px;
+	height: 7px;
+
+	background-color: #000000;
 }
 
 .about-us h2 {
 	padding: 0;
 	margin: 0;
-	margin-bottom: 55px;
+	margin-bottom: 45px;
 }
 
 .about-us p {
 	padding: 0;
 	margin: 0;
-	margin-bottom: 45px;
+	margin-bottom: 35px;
 }
 
 .delivery-list {
 	padding: 0;
+	padding-left: 35px;
 	margin: 0;
+	margin-top: 65px;
 	margin-bottom: 70px;
 
 	font-family: Gilroy, Arial, sans-serif;
@@ -824,8 +879,51 @@ a {
 	list-style: none;
 }
 
-.btn-about-us:hover {
+.delivery-list-item {
+	position: relative;
+}
+
+.delivery-list-item::before {
+	content: "";
+
+	position: absolute;
+	top: 17px;
+	left: -35px;
+
+	width: 4px;
+	height: 4px;
+
+	border: solid 2px #e5e5e5;
+	border-radius: 50%;
+}
+
+.btn-about-us {
+	position: relative;
+
+	display: inline-block;
+	min-width: 260px;
+
+	text-align: center;
+}
+
+.btn-about-us::before {
+	content: "";
+
+	position: absolute;
+	top: 8px;
+	left: 0;
+	z-index: -1;
+
+	width: 260px;
+	height: 8px;
+
 	background-color: #f0c52e;
+
+	transition: transform 0.2s;
+}
+
+.btn-about-us:hover::before {
+	transform: scaleY(5);
 }
 
 .btn-about-us:active {
@@ -834,13 +932,28 @@ a {
 }
 
 .contacts {
+	position: relative;
+
 	width: 560px;
+}
+
+.contacts::before {
+	content: "";
+
+	position: absolute;
+	top: -50px;
+	left: 0;
+
+	width: 80px;
+	height: 7px;
+
+	background-color: #000000;
 }
 
 .contacts h2 {
 	padding: 0;
 	margin: 0;
-	margin-bottom: 55px;
+	margin-bottom: 45px;
 }
 
 .contacts p {
@@ -850,12 +963,40 @@ a {
 }
 
 .map img {
-	margin-bottom: 70px;
+	margin-bottom: 74px;
+}
+
+.btn-contacts {
+	position: relative;
+
+	display: inline-block;
+	min-width: 260px;
+
+	text-align: center;
+}
+
+.btn-contacts::before {
+	content: "";
+
+	position: absolute;
+	top: 8px;
+	left: 0;
+	z-index: -1;
+
+	width: 260px;
+	height: 8px;
+
+	background-color: #f0c52e;
+
+	transition: transform 0.2s;
+}
+
+.btn-contacts:hover::before {
+	transform: scaleY(5);
 }
 
 .main-footer {
 	padding: 65px 0;
-	margin-top: 105px;
 
 	background-color: #464646;
 }
