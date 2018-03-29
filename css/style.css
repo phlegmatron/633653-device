@@ -217,6 +217,10 @@ a {
 	background-position: 0 0;
 }
 
+.profile-navigation-item:nth-child(2) {
+	margin-left: 20px;
+}
+
 .profile-navigation .faint {
 	color: rgba(0, 0, 0, 0.3);
 }
@@ -1002,15 +1006,42 @@ a {
 }
 
 .footer-wrapper {
+	position: relative;
+
 	display: flex;
 	flex-direction: column;
 	width: 1160px;
 	margin: 0 auto;
 }
 
+.footer-wrapper::after {
+	content: "";
+
+	position: absolute;
+	left: 0;
+	bottom: 20px;
+
+	width: 80px;
+	height: 7px;
+
+	background-color: #ffc600; 
+}
+
 .footer-container {
 	display: flex;
+}
+
+.footer-container:first-child {
 	margin-bottom: 35px;
+}
+
+.footer-container:nth-child(2) {
+	align-items: baseline;
+	margin-bottom: 60px;
+}
+
+.footer-container:nth-child(2) p:last-child {
+	margin-left: 200px;
 }
 
 .main-footer a {
@@ -1062,13 +1093,13 @@ a.footer-logo {
 	margin-left: 20px;
 }
 
-.footer-navigation {
+.footer-info-navigation {
 	display: flex;
 	justify-content: space-between;
 	min-width: 425px;
 	padding: 0;
 	margin: 0;
-	margin-left: 165px;
+	margin-left: 160px;
 
 	font-family: Gilroy, Arial, sans-serif;
 	font-size: 18px;
@@ -1079,47 +1110,129 @@ a.footer-logo {
 	list-style: none;
 }
 
-.footer-logo.inner:hover {
+.footer-logo[href]:hover {
 	color: rgba(255, 198, 0, 0.6);
 }
 
-.footer-logo.inner:active {
+.footer-logo[href]:active {
 	color: rgba(255, 198, 0, 0.3);
 }
 
 .footer-profile-navigation a:hover,
-.footer-user-navigation a:hover {
+.footer-user-navigation a:hover,
+.footer-profile-navigation a:focus,
+.footer-user-navigation a:focus {
 	color: rgba(255, 255, 255, 0.6);
+	opacity: 0.5;
 }
 
 .footer-profile-navigation a:active,
 .footer-user-navigation a:active {
 	color: rgba(255, 255, 255, 0.3);
+	opacity: 0.6;
 }
 
-.footer-navigation a:hover {
+.footer-info-navigation a:hover {
 	color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-navigation a:active {
+.footer-info-navigation a:active {
 	color: rgba(255, 255, 255, 0.3);
 }
 
-.footer-container p:last-child {
-	margin-left: 200px;
+.profile-navigation-item:first-child .footer-navigation-item::before {
+	content: "";
+
+	position: absolute;
+	top: 9px;
+	left: -26px;
+
+	width: 13px;
+	height: 12px;
+
+	background-image: url(../img/footer-user-icon.svg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.user-navigation-item:first-child .footer-navigation-item::before {
+	content: "";
+
+	position: absolute;
+	top: 11px;
+	left: -24px;
+
+	width: 10px;
+	height: 10px;
+
+	background-image: url(../img/footer-compare-icon.svg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.user-navigation-item:last-child .footer-navigation-item::before {
+	content: "";
+
+	position: absolute;
+	top: 9px;
+	left: -24px;
+
+	width: 12px;
+	height: 12px;
+
+	background-image: url(../img/footer-cart-icon.svg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
 }
 
 .social-list {
 	display: flex;
+	justify-content: space-between;
+	min-width: 140px;
 	padding: 0;
 	margin: 0;
-	margin-left: 500px;
+	margin-left: 510px;
 
 	list-style: none;
 }
 
+.social-btn.facebook {
+	display: inline-block;
+
+	width: 32px;
+	height: 32px;
+
+	border-radius: 50%;
+	background-image: url(../img/fb-logo.svg);
+}
+
+.social-btn.instagram {
+	display: inline-block;
+
+	width: 32px;
+	height: 32px;
+
+	border-radius: 50%;
+	background-image: url(../img/inst-logo.svg);
+}
+
+.social-btn.twitter {
+	display: inline-block;
+
+	width: 32px;
+	height: 32px;
+
+	border-radius: 50%;
+	background-image: url(../img/twitter-logo.svg);
+}
+
 .copyright {
 	margin-left: auto;
+	width: 27px;
+	height: 35px;
+
+	background-image: url(../img/logo-html.svg);
+	background-repeat: no-repeat;
 }
 
 .modal-write-us {
@@ -1231,6 +1344,7 @@ a.footer-logo {
 
 .breadcrumbs {
 	display: flex;
+	justify-content: space-between;
 	padding: 0;
 	margin: 0;
 	margin-bottom: 50px;
@@ -1244,11 +1358,11 @@ a.footer-logo {
 	list-style: none;
 }
 
-.breadcrumbs a:hover:not(.breadcrumbs-current) {
+.breadcrumbs a[href]:hover {
 	color: rgba(0, 0, 0, 0.6);
 }
 
-.breadcrumbs a:active:not(.breadcrumbs-current) {
+.breadcrumbs a[href]:active {
 	color: rgba(0, 0, 0, 0.1);
 }
 
