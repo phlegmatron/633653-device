@@ -15,7 +15,7 @@
 		  			<form class="search">
 		  				<label class="visually-hidden" for="search">Поиск</label>
 		  				<input type="search" id="search" name="search" placeholder="Поиск по сайту">
-		  				<button class="btn-search" type="submit">Найти</button>
+		  				<button class="btn-search" type="submit" tabindex="-1">Найти</button>
 		  			</form>
 		  			<ul class="profile-navigation">
 		  				<li class="profile-navigation-item"><a href="#">Валентин Петухов</a></li>
@@ -76,44 +76,44 @@
 		  		<form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
 		  			<p class="filter-container">
 		  				<label class="price-range" for="price-range">Стоимость</label>
-		  				от 0
-		  				<input type="range" id="price-range">
-		  				до 5000
+		  				<input class="visually-hidden" type="range" id="price-range">
+		  				<span class="range-start">от 0</span>
+		  				<span class="range-end">до 5000</span>
 		  			</p>
-		  			<fieldset class="filter-container">
+		  			<fieldset class="filter-container color-filter">
 		  				<legend>Цвет</legend>
 		  				<ul>
 		  					<li>
-		  						<input type="checkbox" id="black" value="black" checked>
+		  						<input class="visually-hidden" type="checkbox" id="black" value="black" checked>
 		  						<label for="black">Черный</label>
 		  					</li>
 		  					<li>
-		  						<input type="checkbox" id="white" value="white">
-		  						<label for="black">Белый</label>
+		  						<input class="visually-hidden" type="checkbox" id="white" value="white">
+		  						<label for="white">Белый</label>
 		  					</li>
 		  					<li>
-		  						<input type="checkbox" id="blue" value="blue" checked>
-		  						<label for="black">Синий</label>
+		  						<input class="visually-hidden" type="checkbox" id="blue" value="blue" checked>
+		  						<label for="blue">Синий</label>
 		  					</li>
 		  					<li>
-		  						<input type="checkbox" id="red" value="red" checked>
-		  						<label for="black">Красный</label>
+		  						<input class="visually-hidden" type="checkbox" id="red" value="red" checked>
+		  						<label for="red">Красный</label>
 		  					</li>
 		  					<li>
-		  						<input type="checkbox" id="pink" value="pink">
-		  						<label for="black">Розовый</label>
+		  						<input class="visually-hidden" type="checkbox" id="pink" value="pink">
+		  						<label for="pink">Розовый</label>
 		  					</li>
 		  				</ul>
 		  			</fieldset>
-		  			<fieldset class="filter-container">
+		  			<fieldset class="filter-container bluetooth-filter">
 		  				<legend>Bluetooth</legend>
 		  				<label>
-			  				<input type="radio" name="bluetooth" value="true" checked>
-			  				Есть
+			  				<input class="visually-hidden" type="radio" name="bluetooth" value="true" checked>
+			  				<span>Есть</span>
 		  				</label>
 		  				<label>
-		  					<input type="radio" name="bluetooth" value="false">
-		  					Нет
+		  					<input class="visually-hidden" type="radio" name="bluetooth" value="false">
+		  					<span>Нет</span>
 		  				</label>
 		  			</fieldset>
 		  			<button class="btn btn-filter" type="submit">Показать</button>
@@ -128,8 +128,8 @@
 			  			<li><a href="#">По популярности</a></li>
 			  		</ul>
 			  		<ul class="sort-btn-list">
-			  			<li><a class="sort-btn" href="#">По возрастанию</a></li>
-			  			<li><a class="sort-btn" href="#">По убыванию</a></li>
+			  			<li><a class="sort-btn-up" href="#"><span class="visually-hidden">По возрастанию</span></a></li>
+			  			<li><a class="sort-btn-down" href="#"><span class="visually-hidden">По убыванию</span></a></li>
 			  		</ul>
 		  		</div>
 		  		<ul class="catalog-list">
@@ -141,7 +141,7 @@
 		  				<button class="add-compare" type="button">Добавить к сравнению</button>
 		  			</li>
 		  			<li class="catalog-item">
-		  				<h2><a href="#">Профессиональная селфи-палка</a></h2>
+		  				<h2><a href="#">Профессиональная<br> селфи-палка</a></h2>
 		  				<img src="img/catalog-item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
 		  				<p>1 500 руб.</p>
 		  				<button class="btn btn-cart" type="button">В корзину</button>
