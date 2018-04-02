@@ -96,6 +96,7 @@ img {
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
 
+	cursor: pointer;
 	border: none;
 	background: none;
 }
@@ -157,7 +158,7 @@ img {
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
 
-	margin-bottom: 30px;
+	margin-bottom: 25px;
 }
 
 .search {
@@ -183,8 +184,12 @@ img {
 
 .search input[type="search"] {
 	width: 377px;
+	padding: 0;
+	padding-top: 6px;
 	padding-left: 39px;
-	padding-bottom: 10px;
+	padding-bottom: 12px;
+
+	line-height: 20px;
 
 	border: none;
 	background-color: #f7e296; 
@@ -193,12 +198,14 @@ img {
 
 .btn-search {
 	position: absolute;
-	top: 0;
-	right: -84px;
+	top: -9px;
+	right: -85px;
+	width: 84px;
 
 	font-size: 15px;
 	line-height: 30px;
 	display: none;
+	height: 49px;
 
 	background: none;
 	border: solid 2px #000000;
@@ -486,10 +493,10 @@ img {
 
 	display: none;
 	width: 1160px;
-	min-height: 140px;
+	min-height: 160px;
 	padding: 0;
 	margin: 0;
-	margin-top: 20px;
+	/*margin-top: 20px;*/
 
 	line-height: 36px;
 
@@ -500,6 +507,7 @@ img {
 .header-catalog-column ul {
 	padding: 0;
 	margin: 0;
+	margin-top: 20px;
 
 	list-style: none;
 	list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=); /*for edge*/
@@ -569,7 +577,7 @@ img {
 
 	position: absolute;
 	top: 60px;
-	right: 28px;
+	right: 48px;
 	z-index: -1;
 
 	font-family: Gilroy, Arial, sans-serif;
@@ -683,6 +691,10 @@ img {
 	background: none;
 	border: solid 1px #000000;
 	border-radius: 50%;
+}
+
+.btn-slide span {
+	font-size: 0;
 }
 
 .btn-slide:nth-of-type(2) {
@@ -1794,6 +1806,7 @@ a.footer-logo {
 
 	position: absolute;
 	top: 13px;
+	left: 27px;
 
 	width: 2px;
 	height: 30px;
@@ -1840,6 +1853,7 @@ a.footer-logo {
 }
 
 .inner-page {
+	display: block;
 	overflow: hidden;
 }
 
@@ -2062,6 +2076,8 @@ a.footer-logo {
 	z-index: 1;
 
 	font-family: Gilroy, Arial, sans-serif;
+
+	cursor: pointer;
 }
 
 .range-end::after {
@@ -2090,14 +2106,6 @@ a.footer-logo {
 	        transform: scale(1.1);
 }
 
-.range-start:focus,
-.range-end:focus {
-	outline-color: rgb(77, 144, 254); // #4D90FE
-	outline-offset: -2px;
-	outline-style: auto;
-	outline-width: 5px;
-}
-
 .range-end {
 	position: absolute;
 	top: 82px;
@@ -2105,6 +2113,8 @@ a.footer-logo {
 	z-index: 1;
 
 	font-family: Gilroy, Arial, sans-serif;
+
+	cursor: pointer;
 }
 
 .color-filter {
@@ -2127,6 +2137,8 @@ a.footer-logo {
 
 	font-size: 14px;
 	line-height: 40px;
+
+	cursor: pointer;
 }
 
 .color-filter label::before {
@@ -2156,13 +2168,6 @@ a.footer-logo {
 
 .color-filter label:hover::before {
 	opacity: 0.6;
-}
-
-.color-filter label:focus::before {
-	outline-color: rgb(77, 144, 254); // #4D90FE
-	outline-offset: -2px;
-	outline-style: auto;
-	outline-width: 5px;
 }
 
 .bluetooth-filter label {
@@ -2320,10 +2325,12 @@ a.footer-logo {
 .sort-container > h2 {
 	padding: 0;
 	margin: 0;
+	margin-top: 2px;
 
 	font-family: Gilroy, Arial, sans-serif;
 	font-size: 16px;
 	line-height: 24px;
+	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
 }
@@ -2369,6 +2376,21 @@ a.footer-logo {
 	position: relative;
 }
 
+ul.sort-btn-list {
+	margin-left: auto;
+}
+
+.sort-btn-list li:first-child {
+	margin-right: 20px;
+}
+
+.sort-btn-up,
+.sort-btn-down {
+	display: flex;
+	width: 10px;
+	height: 30px;
+}
+
 .sort-btn-up::before {
 	content: "";
 
@@ -2408,14 +2430,6 @@ a.footer-logo {
 .sort-btn-down[href]:active::before,
 .sort-btn-up[href]:active::before {
 	opacity: 1;
-}
-
-.sort-btn-down[href]:focus::before,
-.sort-btn-up[href]:focus::before {
-	outline-color: rgb(77, 144, 254); // #4D90FE
-	outline-offset: -2px;
-	outline-style: auto;
-	outline-width: 5px;
 }
 
 .catalog-list {
@@ -2567,6 +2581,8 @@ a.footer-logo {
 	font-size: 13px;
 	line-height: 36px;
 	color: rgba(0, 0, 0, 0.5);
+
+	cursor: pointer;
 	border: none;
 	background: none;
 }
@@ -2681,13 +2697,13 @@ a.footer-logo {
 	max-width: 160px;
 	padding: 0;
 	margin: 0;
-	margin-left: 15px;
+	margin-left: 42px;
 
 	list-style: none;
 }
 
 .pagination-item {
-	margin-right: 30px;
+	margin-right: 28px;
 }
 
 .pagination-list a[href] {
