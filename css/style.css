@@ -598,6 +598,12 @@ img {
 	text-align: center;
 }
 
+.slider-image-wrapper img[alt="Фитнес-браслет"] {
+	position: relative;
+	top: 11px;
+	left: 6px;
+}
+
 .slider-image-wrapper img[alt="Квадрокоптер"] {
 	margin-top: 60px;
 	margin-left: 20px;
@@ -1214,7 +1220,7 @@ img {
 .contacts {
 	position: relative;
 
-	width: 562px;
+	width: 560px;
 }
 
 .contacts::before {
@@ -1244,7 +1250,8 @@ img {
 	letter-spacing: 0;
 }
 
-.map img {
+.map {
+	display: block;
 	margin-bottom: 62px;
 }
 
@@ -1636,6 +1643,8 @@ a.footer-logo {
 
 	margin-top: 32px;
 	margin-bottom: 8px;
+
+	vertical-align: middle;
 
 	font-family: Gilroy, Arial, sans-serif;
 	font-size: 18px;
